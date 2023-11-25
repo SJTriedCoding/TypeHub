@@ -1,242 +1,265 @@
-/* POPPINS FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-*{  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    
 }
 body{
-    background: url("images/1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
+    background: #812d03;
+    font-family: 'Poppins', sans-serif;
+    height: 270vh;
 }
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 110vh;
-    background: rgba(39, 39, 39, 0.4);
-}
-.nav{
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-around;
+.container{
     width: 100%;
-    height: 100px;
-    line-height: 100px;
-    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
-    z-index: 100;
-}
-.nav-logo p{
-    color: rgb(11, 10, 10);
-    font-size: 25px;
-    font-weight: 600;
-}
-.nav-menu ul{
-    display: flex;
-}
-.nav-menu ul li{
-    list-style-type: none;
-}
-.nav-menu ul li .link{
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
-    padding-bottom: 15px;
-    margin: 0 25px;
-}
-.link:hover, .active{
-    border-bottom: 2px solid #fff;
-}
-.nav-button .btn{
-    width: 130px;
-    height: 40px;
-    font-weight: 500;
-    background: rgba(132, 123, 123, 0.4);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .3s ease;
-}
-.btn:hover{
-    background: rgba(255, 255, 255, 0.3);
-}
-#registerBtn{
-    margin-left: 15px;
-}
-.btn.white-btn{
-    background: rgba(255, 255, 255, 0.7);
-}
-.btn.btn.white-btn:hover{
-    background: rgba(255, 255, 255, 0.5);
-}
-.nav-menu-btn{
-    display: none;
-}
-.form-box{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 512px;
-    height: 420px;
-    overflow: hidden;
-    z-index: 2;
-}
-.login-container{
-    position: absolute;
-    left: 4px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    transition: .5s ease-in-out;
-}
-.register-container{
-    position: absolute;
-    right: -520px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    transition: .5s ease-in-out;
-}
-.top span{
-    color: #fff;
-    font-size: small;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-}
-.top span a{
-    font-weight: 500;
-    color: #fff;
-    margin-left: 5px;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/typing_girl_img.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 header{
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    padding: 10px 0 30px 0;
-}
-.two-forms{
+    width: 100%;
+    height: 10vh;
+    background:rgba(0,0,0,0.5);
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
 }
-.input-field{
-    font-size: 15px;
-    background: rgba(33, 37, 37, 0.2);
+.logo{
+    width: 300px;
+    height: 10vh;
+    background: #812d03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
-    height: 50px;
-    width: 100%;
-    padding: 0 10px 0 45px;
-    border: none;
-    border-radius: 30px;
+    clip-path: polygon(0 0, 100% 0, 64% 100%, 0% 100%);
+    padding: 10px;
+    line-height: 1.3rem;
+}
+.logo p{
+    width: 130px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.logo .fas{
+    font-size: 50px;
+}
+ul.navbar{
+    display: flex;
+    list-style: none;
+}
+ul.navbar li{
+    width: 120px;
+}
+ul.navbar li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+ul.navbar li a.active{
+    color: #faf9f6;
+}
+ul.navbar li a:hover:not(.active){
+    color: #FEC53A;
+}
+#btn{
+    width: 250px;
+    height: 10vh;
+    background: #812d03;
+    color: #000;
     outline: none;
-    transition: .2s ease;
-}
-.input-field:hover, .input-field:focus{
-    background: rgba(255, 255, 255, 0.25);
-}
-::-webkit-input-placeholder{
-    color: #fff;
-}
-.input-box i{
-    position: relative;
-    top: -35px;
-    left: 17px;
-    color: #fff;
-}
-.submit{
-    font-size: 15px;
-    font-weight: 500;
-    color: black;
-    height: 45px;
-    width: 100%;
     border: none;
-    border-radius: 30px;
-    outline: none;
-    background: rgba(214, 221, 222, 0.7);
-    cursor: pointer;
-    transition: .3s ease-in-out;
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 40px;
 }
-.submit:hover{
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+#btn .fas{
+    margin-right: 10px;
 }
-.two-col{
+
+/* Content desc starts here */
+.content-wrapper{
+    width: 80%;
+    min-height: 80vh;
+    margin: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: #fff;
-    font-size: small;
-    margin-top: 10px;
 }
-.two-col .one{
+/* .content-desc{
+
+} */
+
+.content-desc h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.content-desc p{
+    width: 550px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 10px;
+}
+.content-desc span{
+    color: #812d03;
+}
+#btn2{
+    width: 350px;
+    height: 10vh;
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    background: #812d03;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    clip-path: polygon(0 0, 74% 0, 100% 100%, 0% 100%);
+    border-radius: 20px;
+    text-align: left;
+}
+.logo-section{
     display: flex;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
 }
-.two label a{
+.logo-section .fas{
+    font-size: 6rem;
+    color: #fefefe;
+}
+.logo-section h1{
+    width: 250px;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-left: 10px;
+}
+/* Section one starts here */
+
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767),rgba(0, 0, 0, 0.712)),
+    url(../images/wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.section-1-wrapper{
+    width: 70%;
+    margin: auto;
+}
+.section-1 h1{
+    width: 500px;
+    color: #FEC53A;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: 400;
+}
+.section-1-img{
+    display: flex;
+
+}
+.img:hover{
+    transform: translateY(-10px);
+}
+
+/* Section 3 starts here */
+.game-categories{
+    width: 70%;
+    margin: 50px auto;
+    position: relative;
+}
+.game-categories h1{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.game-wrapper{
+    display: flex;
+}
+.gw{
+    width: 240px;
+    height: 240px;
+    background: url(../images/tttlogo.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 40px 120px 0 120px;
+    border-radius: 120px;
+}
+.gw:hover{
+    transform: translateY(-10px);
+}
+.left{
+    position: relative;
+    right: -140px;
+}
+
+.gw-1{
+    background: url(../images/chesslogo.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+/* FOoter section */
+footer{
+    width: 100%;
+    height: 55vh;
+    background: #282828;
+    display: flex;
+    align-items: center;
+    
+}
+.footer-body{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-logo{
+    height: 14vh;
+    background-color: #812d03;
+    color: #ffffff;
+    line-height: 2.5rem;
+}
+ul h3{
+    color: #fff;
+    font-weight: 500;
+}
+ul li{
+    list-style: none;
+    line-height: 2.5rem;
+}
+ul li a{
     text-decoration: none;
     color: #fff;
 }
-.two label a:hover{
-    text-decoration: underline;
+ul li a .fab{
+    font-size: 1.2rem;
+    color: #02b23a;
+    margin-right: 15px;
 }
-@media only screen and (max-width: 786px){
-    .nav-button{
-        display: none;
-    }
-    .nav-menu.responsive{
-        top: 100px;
-    }
-    .nav-menu{
-        position: absolute;
-        top: -800px;
-        display: flex;
-        justify-content: center;
-        background: rgba(255, 255, 255, 0.2);
-        width: 100%;
-        height: 90vh;
-        backdrop-filter: blur(20px);
-        transition: .3s;
-    }
-    .nav-menu ul{
-        flex-direction: column;
-        text-align: center;
-    }
-    .nav-menu-btn{
-        display: block;
-    }
-    .nav-menu-btn i{
-        font-size: 25px;
-        color: #fff;
-        padding: 10px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        cursor: pointer;
-        transition: .3s;
-    }
-    .nav-menu-btn i:hover{
-        background: rgba(255, 255, 255, 0.15);
-    }
+ul li a:hover{
+    color: #FEC53A;
 }
-@media only screen and (max-width: 540px) {
-    .wrapper{
-        min-height: 100vh;
-    }
-    .form-box{
-        width: 100%;
-        height: 500px;
-    }
-    .register-container, .login-container{
-        width: 100%;
-        padding: 0 20px;
-    }
-    .register-container .two-forms{
-        flex-direction: column;
-        gap: 0;
-    }
+.footer-bottom{
+    width: 100%;
+    height: 7vh;
+    background: #1B1919;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+.footer-bottom span{
+    color: #FEC53A;
+    font-weight: bold;
 }
