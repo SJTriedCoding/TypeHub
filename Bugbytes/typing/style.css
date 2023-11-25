@@ -57,24 +57,3 @@ h2{
     letter-spacing: .02rem;
     text-align: center;
 }
-
-.timer-div{
-    width: 100%;
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-}
-#show-time{
-    font-size: 2.4rem;
-    padding: 1.5rem;
-    text-align: right;
-    width: 6rem;
-    height: 6rem;
-    place-items: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: .5rem solid #645CBB;
-    
-}
