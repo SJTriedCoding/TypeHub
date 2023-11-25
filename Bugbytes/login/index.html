@@ -3,89 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <title>TypeHub</title>
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>TypeHub | Login & Registration</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <i class="fas fa-keyboard"></i>
-                <p>TypeHub</p>
-            </div>
-            <ul class="navbar">
-                <li><a href="typing/index.html" class="active">Speed Test</a></li>
-                <li><a href="leaderboard/index.html">LeaderBoard</a></li>
-            </ul>
-            <li>
-                <a href="login/login.html">
-                    <button type="button" id="btn">
-                        <i class="fas fa-play"></i> LOGIN
-                    </button>
-                </a>
-            </li>
-        
-        </header>
-
-        <div class="content-wrapper">
-            <div class="content-desc">
-                <h1>TypeHub</h1>
-                <p>Try your luck on writing  letter to your loved one
-                   and see how accurate you are </p>
-                <p>Our Top Players are waiting for your challenge, click the 
-                    button below to get started.</p>
-
-                <button id="btn2">Challenge Now</button>
-            </div>
-
-           
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>TypeHub</p>
         </div>
-    </div>
-
-    <div class="logo-section">
-        <i class="fas fa-keyboard"></i>
-        <h1>TypeHub</h1>
-    </div>
-    
-    <section class="section-1">
-        <div class="section-1-wrapper">
-        </div>
-        
-        <div class="game-categories">
-            <h1>CHALLENGES</h1>
-            <div class="game-wrapper">
-                <a href="#"><div class="gw gw-1"></div></a>
-            </div>
-    
-            <div class="game-wrapper left">
-                <a href="#"><div class="gw gw-6"></div></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- New section is down here below -->
-
-
-    <footer>
-        <div class="footer-body">
-            <div class="logo footer-logo">
-                <i class="fas fa-keyboard"></i>
-                <h1>TypeHub</h1>
-            </div>
-
+        <div class="nav-menu" id="navMenu">
             <ul>
-                <h3>Get In Touch</h3>
-                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i>Facebook</a></li>
-                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i>Instagram</a></li>
-                <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i>Twitter</a></li>
-                <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i>Linkedin</a></li>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link">Services</a></li>
+                <li><a href="#" class="link">About</a></li>
             </ul>
         </div>
-    </footer>
-    <div class="footer-bottom">
-        <p>Copyright &copy; All Right Reserved | Designed <span>By BugBytes</span> 2023</p>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" id= "email" name="email" placeholder="Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="password" name="password" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <button onclick="login()">login</button>
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" >Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" id="name" name="name" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <!-- <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div> -->
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" id="cemail" name="cemail"  placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" id="cpass" name="cpass" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <button onclick="signup()">submit</button>
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
     </div>
+</div>   
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+
+<script>
+
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+
+</script>
+<script src="login.js"></script>
+
 </body>
 </html>
